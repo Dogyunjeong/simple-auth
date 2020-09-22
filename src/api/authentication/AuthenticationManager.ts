@@ -1,5 +1,6 @@
 import AuthenticationController from './AuthenticationController'
 import ExpectedError from '../../utils/ExpectedError'
+import { saltPassword } from '../../utils/authUtils'
 
 class AuthenticationManager {
     private _authenticationController: AuthenticationController
@@ -14,12 +15,12 @@ class AuthenticationManager {
         if (existingAuth) {
             throw new ExpectedError('Username is already in used', ExpectedError.STATUS_CODE.CLIENT_PARAM)
         }
-        const saltedPassword = password
+        const saltedPassword = await saltPassword(password)
         return this._authenticationController.signUp({ username, saltedPassword })
     }
 
     public signIn = async ({ username, password }: { username: string, password: string }) => {
-        const saltedPassword = password
+        const saltedPassword = await saltPassword(password)
         return this._authenticationController.signIn({ username, saltedPassword })
     }
 }
