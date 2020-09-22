@@ -1,0 +1,1 @@
+{"version":3,"file":"AuthenticationRouter.js","sourceRoot":"","sources":["../../../src/api/authentication/AuthenticationRouter.ts"],"names":[],"mappings":";;;;;AAAA,sDAA6B;AAC7B,oFAA2D;AAE3D,MAAM,oBAAoB,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAA;AAC7C,MAAM,qBAAqB,GAAG,IAAI,+BAAqB,EAAE,CAAA;AAEzD,oBAAoB,CAAC,IAAI,CAAC,UAAU,EAAE,qBAAqB,CAAC,MAAM,CAAC,CAAA;AAEnE,kBAAe,oBAAoB,CAAA"}
